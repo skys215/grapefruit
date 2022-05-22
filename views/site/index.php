@@ -193,8 +193,9 @@ $this->title = 'My Yii Application';
                 var queryString = '';
                 var ids = [];
                 var url = $(this).data('url');
-                if (!getFullSelection()){
-                    $('input[name="selection[]"]:checked').each(function(key, item){
+                var checkedItems = $('input[name="selection[]"]:checked');
+                if (!getFullSelection() && checkedItems.length > 0){
+                    checkedItems.each(function(key, item){
                         ids.push($(item).val().toString());
                     });
                     queryString = 'ids='+ids.join(',');

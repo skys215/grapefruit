@@ -36,7 +36,7 @@ class SupplierSearch extends Supplier
             ],
         ]);
 
-        if (isset($params['ids'])) {
+        if (isset($params['ids']) && $params['ids']) {
             $ids = explode(',',$params['ids']);
             $query->where(['in', 'id', $ids]);
         }
