@@ -3,7 +3,7 @@ use yii\grid\GridView;
 use yii\bootstrap4\Button;
 use yii\bootstrap4\Html;
 use yii\web\View;
-use yii\helpers\URL;
+use yii\helpers\Url;
 
 /** @var yii\web\View $this */
 
@@ -21,7 +21,7 @@ $this->title = 'My Yii Application';
                         'options' => [
                             'class' => 'btn-primary',
                             'id' => 'export-button',
-                            'data-url' => URL::toRoute('site/export'),
+                            'data-url' => Url::toRoute('site/export'),
                         ],
                     ]);
                 ?>
